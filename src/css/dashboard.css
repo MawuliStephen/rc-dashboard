@@ -1,0 +1,116 @@
+/* General styles for the dashboard */
+/* .dashboard {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+   */
+  h1 {
+    color: #343a40;
+    font-size: 2.5rem;
+  }
+  
+  h4 {
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
+  
+  .stat-card h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+  
+  .stat-card p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .chart-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .activity-item {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #e3e4e8;
+  }
+  
+  .activity-item:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* For mobile devices */
+  @media (max-width: 575.98px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .stat-card {
+      padding: 15px;
+    }
+  
+    .stat-card h3 {
+      font-size: 1.5rem;
+    }
+  
+    .stat-card p {
+      font-size: 0.9rem;
+    }
+  
+    .activity-item {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* For tablets and up */
+  @media (max-width: 767.98px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    .stat-card {
+      padding: 18px;
+    }
+  
+    .stat-card h3 {
+      font-size: 1.8rem;
+    }
+  
+    .stat-card p {
+      font-size: 1rem;
+    }
+  
+    .activity-item {
+      font-size: 1rem;
+    }
+  }
+  
+  

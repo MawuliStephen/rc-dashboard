@@ -1,0 +1,112 @@
+.user-container, .notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-container {
+    cursor: pointer; /* Show pointer cursor for click interaction */
+}
+
+.avatar-placeholder {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.popup {
+    position: absolute;
+    bottom: -800%;
+    top:250%;
+    left: -100%; 
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Adjust width to fit content */
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* width: auto; */
+    height: fit-content;
+}
+
+/* Show the popup image and name */
+.popup-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.popup-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Show the popup on hover for large screens */
+@media (min-width: 769px) {
+    .user-container:hover .popup,
+    .notification-container:hover .popup {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Ensure popup is always visible when clicked on mobile devices */
+@media (max-width: 768px) {
+    .popup.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.bell-icon-container {
+    position: relative;
+}
+
+.bell-icon {
+    color: #000;
+}
+
+.bell-icon--active {
+    color: #f00;
+}
+
+.message-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.message-item.unread {
+    font-weight: bold;
+}
