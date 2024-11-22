@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Root Styles */
+:root {
+    /* Color Variables */
+    --background-color: white;
+    --text-color: #333;
+    --link-color: #007bff;
+}
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    /* font-family: Arial, sans-serif; */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Container Styles */
+.authenticated-layout {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+/* Header Styles */
+header {
+    padding: 20px 0;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+/* Navigation Styles */
+
+nav, .top-nav {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #ffffff; */
+
+}
+
+.top-nav {
+    background-color: #ffffff;
+    padding: 12px 12px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.leftRight {
+    padding-left: 3rem!important;
+    padding-right: 3rem !important;
+}
+
+nav ul {
+    list-style-type: none;
+    /* display: flex; */
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+
+
+
+/* General styling for the list item */
+li {
+    list-style: none;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+  }
+  
+  /* Styling for the link inside the list item */
+  li a {
+    text-decoration: none; 
+    color: black; 
+    display: flex; 
+    align-items: center;
+  }
+
+  li a:hover {
+    text-decoration: none; 
+
+
+  }
+  
+  li a:before {
+    /* content: '\f00c';  */
+    font-family: 'FontAwesome'; 
+    margin-right: 10px; 
+  }
+  
+  /* Styling for the active state */
+
+  
+  li.active a {
+    color: white; /* Sets the text color for active state to white */
+  }
+  .menu-item {
+    display: flex;
+    align-items: center; /* Aligns icon and text vertically */
+    text-decoration: none; /* Removes underline from NavLink */
+  }
+
+
+
+/* other nav items */
+.user-info {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-left: 8px; */
+}
+
+.avatar,
+.notification {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+
+}
+
+/* Main Content Styles */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    width: 10px;
+    padding: 0;
+    border: none !important;
+}
+
+
+
+/* Programs label */
+.label {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+
+.dbhero {
+    padding: 10px;
+    background-color: var(--brandColor4);
+    border-radius: 10px;
+    color: var(--white);
+    height: 200px;
+}
+
+
+.courses-card {
+
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin: 15px;
+    margin-left: 0 !important;
+
+    /* color: var(--white); */
+
+}
+
+
+/* .background {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    padding: 20px;
+} */
+
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.loading-message,
+.error-message,
+.no-details {
+    color: #888;
+    text-align: center;
+}
+
+.message-detail {
+    padding: 20px;
+}
+
+.back-button {
+    margin-bottom: 20px;
+}
+
+.message-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.message-content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.message-meta {
+    font-size: 14px;
+    color: #777;
+}
+
+.message-timestamp {
+    margin-bottom: 10px;
+}
+
+.message-visibility {
+    font-weight: bold;
+}
+
+
+.course-hero-section {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 400px; /* Adjust height as needed */
+    background: linear-gradient(135deg, rgba(50, 147, 251, 0.8), rgba(47, 148, 255, 0.17));
+    color: white;
+ 
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.course-name {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+.course-code,
+.course-fees,
+.course-level {
+    font-size: 1.25rem;
+    margin: 0.25rem 0;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.progress {
+    background: #28a745; /* Green color for progress */
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .course-name {
+        font-size: 2rem;
+    }
+
+    .course-code,
+    .course-fees,
+    .course-level {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Media Queries */
+
+
+@media screen and (max-width: 768px) {
+  
+
+    .leftRight {
+        padding-left: 0rem!important;
+        padding-right: 0rem !important;
+    }
+    .content {
+        padding: 20px 0;
+        margin-left: 0!important;
+        width: 100%;
+    }
+
+    .user-info {
+        width: 120px !important;
+        
+    }
+    
+
+
+}

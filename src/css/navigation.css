@@ -1,0 +1,251 @@
+/* dashboard-layout.css */
+
+.dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color:#f9f9f9;
+
+}
+
+.navtop {
+    border-bottom: solid 1px;
+    position: fixed;
+    width: 100%;
+}
+
+
+/* .content {
+    display: flex;
+    flex: 1;
+    overflow-x: hidden !important;
+
+} */
+
+.content {
+    margin-top: 80px !important;
+    margin-left: 200px;
+    padding: 20px;
+    /* background-color:#f9f9f9; */
+     /* #dee2e66e; */
+    /* height: 100%; */
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+
+.sidenav {
+    position: fixed;
+    /* top: 65px; Height of topnav */
+    top: 85px;
+    left: 0;
+    width: 200px;
+    /* Adjust width as needed */
+    height: calc(100vh - 60px);
+    /* Full viewport height minus topnav height */
+    border-right: solid 1px;
+    overflow-y: auto;
+    /* Enable scrolling if content exceeds sidebar height */
+    z-index: 900;
+    /* Below topnav but above main content */
+}
+
+/* .sidenav ul li {
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+} */
+
+.menulist {
+    top: 0%;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+
+}
+
+
+
+
+/* Base styles for fullname */
+.fullname {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s ease;
+    /* Ensure text is hidden by default on small screens */
+    opacity: 0;
+    max-width: 0;
+}
+
+/* Show the fullname on hover for large screens */
+@media (min-width: 769px) {
+    .avatar:hover + .fullname {
+        opacity: 1;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+.user-container {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-container {
+    cursor: pointer; /* Show pointer cursor for click interaction */
+}
+
+.avatar-placeholder {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.popup {
+    position: absolute;
+    bottom: 100%; /* Show above the avatar */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.popup-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Show the popup on hover for large screens */
+@media (min-width: 769px) {
+    .user-container:hover .popup {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Ensure popup is always visible when clicked on mobile devices */
+
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .sidenav {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 280px;
+        /* Adjust width as needed */
+        height: 100%;
+        background-color: #fff;
+        /* Adjust background color */
+        transform: translateX(-280px);
+        /* Initially off-screen */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1100;
+        /* Ensure it's above the overlay */
+    }
+
+    .sidenav.open {
+        transform: translateX(0);
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    /* .sidenav ul li {
+        padding: 10px;
+        color: #333;
+        cursor: pointer;
+    } */
+
+    .menulist {
+        top: 0%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-self: start;
+
+    }
+
+    .over {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 1000;
+    }
+
+    .sidenav.open+.over {
+        display: block;
+    }
+
+    .content-container {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .courses-card {
+
+        padding: 10px;
+        width: 300px;
+
+
+
+    }
+
+
+    
+    .fullname.show {
+        opacity: 1;
+        max-width: 100%;
+    }
+
+}

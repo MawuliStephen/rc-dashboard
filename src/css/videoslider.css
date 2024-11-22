@@ -1,0 +1,136 @@
+/* VideoSlider.css */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vbutton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.course-page {
+    padding: 20px;
+  }
+  
+  .course-image img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .course-video video {
+    display: block;
+    margin: 20px 0;
+  }
+  
+  .course-content {
+    margin-top: 40px;
+  }
+  
+  .module {
+    margin-bottom: 20px;
+  }
+  
+  .join-call-btn,
+  .join-live-class-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .join-call-btn:hover,
+  .join-live-class-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .course-interactions {
+    margin-top: 40px;
+  }
+  
+  .course-interactions .group-call,
+  .course-interactions .live-class {
+    margin-bottom: 30px;
+  }
+  
+
+
+  .course-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .course-image img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .course-video video {
+    display: block;
+    margin: 20px 0;
+  }
+  
+  .course-content {
+    margin-top: 40px;
+  }
+  
+  .module {
+    margin-bottom: 20px;
+  }
+  
+  .join-call-btn,
+  .join-live-class-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .join-call-btn:hover,
+  .join-live-class-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .course-interactions {
+    margin-top: 40px;
+  }
+  
+  .course-interactions .group-call,
+  .course-interactions .live-class {
+    margin-bottom: 30px;
+  }
+  
