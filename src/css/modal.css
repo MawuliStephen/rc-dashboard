@@ -1,0 +1,65 @@
+/* Styling for the modal overlay (assuming Modal component handles this) */
+.react-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the modal content */
+.modal-content {
+    background-color: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+
+.modal-content button:focus {
+    outline: none;
+}
+
+.modal-content button:hover {
+    background-color: #f0f0f0;
+}
+
+.modal-content button:first-child {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.modal-content button:last-child {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+/* Override react-modal styles */
+.ReactModal__Content.ReactModal__Content--after-open {
+    
+    position: fixed !important; 
+    inset: unset !important; 
+    top: 50px;
+    left: 20%; 
+    right: 20%; 
+    bottom: 50px; 
+    background-color:none rgba(0, 0, 0, 0.8) !important; 
+    overflow: hidden !important;
+    border: none !important;
+    border-radius: 8px !important;
+    outline: none !important; 
+    padding: 30px !important; 
+  }
+  
