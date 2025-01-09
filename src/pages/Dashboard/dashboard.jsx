@@ -30,7 +30,7 @@ const lineChartData = {
 
 const Dashboard = () => {
   return (
-    <div className="">
+    <div className="container">
       <Container fluid>
         {/* Header Section */}
         <Row className="mb-4">
