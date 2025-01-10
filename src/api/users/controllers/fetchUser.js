@@ -87,7 +87,7 @@ const UsersAll = () => {
                         <div key={user.id} className="user-card">
                             <div className="user-card-header">
 
-                                <Link to={`/users/${user.id}`} className="user-card-link">
+                                <Link to={`/users/${user.id}/${user.firstname}`} className="user-card-link">
                                     <h3 className="user-name">
                                         {user.firstname} {user.middlename} {user.surname}
                                     </h3>
