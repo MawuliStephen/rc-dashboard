@@ -1,0 +1,190 @@
+/* students.css */
+
+/* Default styling */
+.students-container {
+    font-family: Arial, sans-serif;
+    transition: opacity 0.5s ease;
+  }
+  
+  .loading {
+    background-color: #f0f0f0; /* Grey background */
+    color: #ccc; /* Grey text color */
+    opacity: 0.6; /* Slightly faded effect */
+  }
+  
+  .loading h1,
+  .loading ul li {
+    color: #ccc; /* Grey text */
+  }
+
+  /* Styling for popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content {
+  text-align: center;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Floating button styles */
+button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Student List Styles */
+.student-list {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.student-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.student-list li {
+  padding: 5px 0;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+}
+
+.pagination span {
+  font-size: 16px;
+  padding: 5px 10px;
+}
+/* Styling for the control elements */
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.controls input {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.controls select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.student-list {
+  margin-top: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.student-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-card h3 {
+  margin: 0;
+}
+
+.student-card p {
+  margin: 5px 0;
+}
+
+/* Pagination Styling */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+}
+
+.pagination span {
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+  
+  /* You can also add a loading spinner or animation here */
+  

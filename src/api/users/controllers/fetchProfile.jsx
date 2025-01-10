@@ -1,16 +1,19 @@
 
+
+
+
 import React, { useState } from "react";
 import useApi from './hook/useApi';
 import { AiOutlineUser } from 'react-icons/ai'; // Import the icon you want to use
 
-const UserProfile = () => {
+const Users = () => {
     const { userData, error, loading, updateProfile } = useApi();
     const [isEditing, setIsEditing] = useState(false);
     const [editedUserData, setEditedUserData] = useState({});
     const [imageFile, setImageFile] = useState(null);
     const [showConfirmation, setShowConfirmation] = useState(false);
 
-    const handleUpdateProfile = async () => {
+    const handleUpdateUser = async () => {
         try {
             // Prepare FormData
             const formData = new FormData();
@@ -40,7 +43,7 @@ const UserProfile = () => {
     };
 
     const handleConfirmUpdate = () => {
-        handleUpdateProfile();
+        handleUpdateUser();
         setShowConfirmation(false);
     };
 
@@ -133,4 +136,4 @@ const UserProfile = () => {
     );
 };
 
-export { UserProfile };
+export { Users };

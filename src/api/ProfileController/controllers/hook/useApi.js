@@ -14,14 +14,14 @@ const useApi = () => {
     useEffect(() => {
         const fetchData = async () => {
             if (currentUser) {
-                await fetchDataEndpoint("/student/portal/profile", token, setUserData, setError, setLoading);
+                await fetchDataEndpoint("/users", token, setUserData, setError, setLoading);
             }
         };
 
         fetchData();
     }, [currentUser, token]);
 
-    const updateProfile = async (updatedUserData) => {
+    const updateUser = async (updatedUserData) => {
         try {
             setLoading(true);
             const config = {
@@ -31,9 +31,9 @@ const useApi = () => {
                 },
             };
 
-            await axios.put(`${baseUrl}/student/portal/profile`, updatedUserData, config);
+            await axios.put(`${baseUrl}/users`, updatedUserData, config);
 
-            await fetchDataEndpoint("/student/portal/profile", token, setUserData, setError, setLoading);
+            await fetchDataEndpoint("/users", token, setUserData, setError, setLoading);
             setLoading(false);
         } catch (err) {
             setError(err);
@@ -41,7 +41,7 @@ const useApi = () => {
         }
     };
 
-    return { userData, error, loading, updateProfile };
+    return { userData, error, loading, updateUser };
 };
 
 export default useApi;
