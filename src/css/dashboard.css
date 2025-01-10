@@ -65,53 +65,172 @@
   .activity-item:hover {
     background-color: #e2e6ea;
   }
+
+  /* Users */
+  /* Card styles */
+/* User card styles */
+.user-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* To position more button inside the card */
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* User card header with name and badge */
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+/* Link and user name */
+.user-card-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.user-card-link:hover {
+  text-decoration: underline;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Badge styles */
+.user-badge {
+  background-color: #4caf50; /* Green for active */
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+
+}
+
+/* More options button (3 dots) */
+.more-options {
+  position: relative;
+}
+
+.dots-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.dots-button:hover {
+  color: #007bff;
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 150px;
+  margin-top: 8px;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown ul li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown ul li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover of the dots button */
+.more-options:hover .dropdown {
+  display: block;
+}
+
+/* Email styling */
+.user-email {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 0;
+}
+
+
+
+
+/* Media Queries for Responsive Design */
   
-  /* Media Queries for Responsive Design */
-  
-  /* For mobile devices */
-  @media (max-width: 575.98px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    .stat-card {
-      padding: 15px;
-    }
-  
-    .stat-card h3 {
-      font-size: 1.5rem;
-    }
-  
-    .stat-card p {
-      font-size: 0.9rem;
-    }
-  
-    .activity-item {
-      font-size: 0.9rem;
-    }
+/* For mobile devices */
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 2rem;
   }
-  
-  /* For tablets and up */
-  @media (max-width: 767.98px) {
-    h1 {
-      font-size: 2.2rem;
-    }
-  
-    .stat-card {
-      padding: 18px;
-    }
-  
-    .stat-card h3 {
-      font-size: 1.8rem;
-    }
-  
-    .stat-card p {
-      font-size: 1rem;
-    }
-  
-    .activity-item {
-      font-size: 1rem;
-    }
+
+  .stat-card {
+    padding: 15px;
   }
-  
+
+  .stat-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat-card p {
+    font-size: 0.9rem;
+  }
+
+  .activity-item {
+    font-size: 0.9rem;
+  }
+}
+
+/* For tablets and up */
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .stat-card {
+    padding: 18px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .stat-card p {
+    font-size: 1rem;
+  }
+
+  .activity-item {
+    font-size: 1rem;
+  }
+}
+
   

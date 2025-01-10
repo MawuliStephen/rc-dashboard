@@ -24,7 +24,7 @@ const SideNav = ({ show, closeSideNav, sideNavRef }) => {
     }, [closeSideNav]);
 
     if (!currentUser) {
-        return <Navigate to="/login" replace />;
+        return <Navigate to="/" replace />;
       }
 
     const handleOverlayClick = () => {
@@ -38,6 +38,14 @@ const SideNav = ({ show, closeSideNav, sideNavRef }) => {
                     <div className='menulist'>
                         <li>
                             <NavLink to="/dashboard" className="active" onClick={closeSideNav} >Dashboard</NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink to="/dashboard/students" className="active" onClick={closeSideNav} >Students</NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink to="/dashboard/users" className="active" onClick={closeSideNav} >Users</NavLink>
                         </li>
 
                         <li> <div className='mb-5'>

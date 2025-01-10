@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useEndPoint from "./hook/useEndPoint";
 
-const StudentPortal = () => {
+const AllUsers = () => {
     const { data, error, loading } = useEndPoint();
 
     return (
@@ -23,7 +23,7 @@ const StudentPortal = () => {
     );
 };
 
-export default StudentPortal;
+export default AllUsers;
 
 
 
@@ -41,7 +41,7 @@ export default StudentPortal;
 // import { fetchDataEndpoint } from "../../../utils/fetch";
 
 
-// const StudentPortal = () => {
+// const AllUsers = () => {
 //     const [userData, setUserData] = useState([]);
 //     const [error, setError] = useState(null);
 //     const [loading, setLoading] = useState(true);

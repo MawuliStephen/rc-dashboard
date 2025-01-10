@@ -41,7 +41,9 @@ import Unauthorized from './components/Unauthorized';
 // Student Portal Pages | Password protected
 
 import Admin from "./components/layout/closedroute/Admin";
-import Dashboard from './pages/Dashboard/dashboard';
+import Dashboard from './pages/Dashboard/dashboard/dashboard';
+import Students from './pages/Dashboard/students/students';
+import UsersPage from './pages/Dashboard/users/user';
 
 // import Portal from './pages/student/Portal';
 // import Profile from './pages/student/Profile';
@@ -77,6 +79,10 @@ function App() {
         <Route element={<Admin />}>
           {/* <Route index element={<Home />} /> */}
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/students" element={<Students />}/>
+          <Route path="/dashboard/users" element={<UsersPage />}/>
+
+
 
           {/* <Route path="/portal/*" element={<Missing />} /> */}
         </Route>
