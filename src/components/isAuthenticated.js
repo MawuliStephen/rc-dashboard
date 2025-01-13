@@ -7,7 +7,7 @@ const isAuthenticated = ({ children }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (!currentUser) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children; // Render children if user is authenticated

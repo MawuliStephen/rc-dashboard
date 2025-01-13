@@ -1,7 +1,4 @@
 
-
-
-
 import React, { useState } from "react";
 import useApi from './hook/useApi';
 import { AiOutlineUser } from 'react-icons/ai'; // Import the icon you want to use

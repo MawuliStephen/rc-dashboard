@@ -14,7 +14,7 @@ const fetchDataEndpoint = async (endpoint, token, setData, setError, setLoading)
         setData(res.data);
         // console.log("Fetched data:", res.data);
     } catch (err) {
-        console.error("Error fetching data:", err);
+        console.log("Error fetching data:", err);
         setError(err);
     } finally {
         setLoading(false);
